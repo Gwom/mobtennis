@@ -8,19 +8,19 @@
 
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1)
     {
-        window.location.replace = 'https://play.google.com/store/apps/details?id=com.restartworld.tennis&referrer=utm_source%3D{referral}'.replace('{referral}', referral ? referral[1] : 'none');
+        window.location.href = 'https://play.google.com/store/apps/details?id=com.restartworld.tennis&referrer=utm_source%3D{referral}'.replace('{referral}', referral ? referral[1] : 'none');
         //alert('https://play.google.com/store/apps/details?id=com.restartworld.tennis&referrer=utm_source%3D{referral}'.replace('{referral}', referral ? referral[1] : 'none'));
     }
     else if (agentID)
     {
         // Needs to be just location.href - see http://stackoverflow.com/questions/28883292/window-redirect-not-redirecting
-        window.location.replace = 'https://itunes.apple.com/app/apple-store/id1213578616?pt=118021568&ct={referral}&mt=8'.replace('{referral}', referral ? referral[1] : 'none');
+        window.location.href = 'https://itunes.apple.com/app/apple-store/id1213578616?pt=118021568&ct={referral}&mt=8'.replace('{referral}', referral ? referral[1] : 'none');
         //alert('https://itunes.apple.com/app/apple-store/id1213578616?pt=118021568&ct={referral}&mt=8'.replace('{referral}', referral ? referral[1] : 'none'));
     }
     else
     {
         //alert('http://www.mobtennis.com');
-        window.location.replace = 'http://www.mobtennis.com';
+        window.location.href = 'http://www.mobtennis.com';
     }
 
     </script>
