@@ -24,12 +24,19 @@
     <script>
     var referral = window.location.href.match(/referral=([^&]+)/);
 
+    var deviceAgent = navigator.userAgent.toLowerCase();
+    var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
+
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
-      window.location.href = 'https://play.google.com/store/apps/details?id=com.restartworld.tennis&referrer=utm_source%3D{referral}'.replace('{referral}', referral ? referral[1] : 'none');
-   }
-   else  {
-      window.location.href = 'https://itunes.apple.com/app/apple-store/id1213578616?pt=118021568&ct={referral}&mt=8'.replace('{referral}', referral ? referral[1] : 'none');
-   }
+        window.location.href = 'https://play.google.com/store/apps/details?id=com.restartworld.tennis&referrer=utm_source%3D{referral}'.replace('{referral}', referral ? referral[1] : 'none');
+    }
+    else if (agentID)  {
+        //window.location.href = 'https://itunes.apple.com/app/apple-store/id1213578616?pt=118021568&ct={referral}&mt=8'.replace('{referral}', referral ? referral[1] : 'none');
+        window.location.href = 'https://google.com';
+    }
+    else  {
+        window.location.href = 'http://www.mobtennis.com';
+    }
 
     </script>
   
